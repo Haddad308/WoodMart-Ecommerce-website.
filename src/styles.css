@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Nerko+One&display=swap');
+
+.mainBg{
+    background-color: #1C61E7;
+}
+
+/* html{
+    overflow:hidden;
+} */
+
+body{
+    background-color: #F6F6F6;
+}
+
+nav{
+    background-color: white;
+}
+
+footer{
+    background-color: white;
+}
+.navtext{
+    color: #1C61E7;
+}
+
+.wed50{
+    width: 40px;
+    height: 40px;
+}
+
+.nav-link{
+    color: #333333 ;
+}
+
+.text-color{
+    cursor: pointer;
+    transition: all 400ms;
+}
+
+.text-color:hover{
+    color: #1C61E7;
+}
+
+.grey{
+    color: #918f8f;
+}
+
+.icon-size
+{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.facebook{
+    background-color: #0866FF;
+    transition: all 400ms;
+}
+
+.facebook:hover{
+    background-color: #0b4eb9;
+}
+
+.twitter{
+    background-color: #1A8CD8;
+    transition: all 400ms;
+}
+
+.twitter:hover{
+    background-color: #1a6ea5;
+}
+
+.pinterest{
+    background-color: #AF1C22;
+    transition: all 400ms;
+}
+
+.pinterest:hover{
+    background-color: #8d191d;
+}
+
+.linkedin{
+    background-color: #02649A;
+    transition: all 400ms;
+}
+
+.linkedin:hover{
+    background-color: #01486e;
+}
+
+.telgram{
+    background-color: #37AEE2;
+    transition: all 400ms;
+}
+.telgram:hover{
+    background-color: #1f7ca4;
+}
+
+hr{
+    color:#918f8f ;
+}
+
+.small{
+    font-size: 12px;
+}
+
+.w-49
+{
+    width: 49%;
+}
