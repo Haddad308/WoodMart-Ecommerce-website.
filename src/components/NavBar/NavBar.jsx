@@ -1,9 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './NavBar.module.css'
 import CirlceIcon from '../CirlceIcon/CirlceIcon'
+import { tokenContext } from '../../context/tokenContext';
+
+
+
 
 export default function NavBar() {
+    let { token,setToken } = useContext(tokenContext);
+    let username = localStorage.getItem("userName");
+    let navigate = useNavigate();
+
+    function logout(){
+        navigate("/login");
+        setToken(null);
+        localStorage.removeItem("userName");
+        localStorage.removeItem("userToken");
+    }
+
     return (
         <nav className={`navbar navbar-expand-lg ${styles.bgNav} `}>
             <div className="container-fluid">
@@ -32,16 +47,38 @@ export default function NavBar() {
                         </li>
                     </ul>
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover}`} to="#">
-                                <div className={`${styles.icons} position-relative`}>
-                                    <i className={`fa fa-shopping-cart fs-5  `}></i>
-                                    <p className={`${styles.counter} shadow  p-2`}>0</p>
+                        <li className="nav-item ">
+                            {token? <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover} `} to="#">
+                                    <div className={`${styles.icons}`}>
+                                        <i className={`fa-regular fa-user fs-5`}></i>
+                                    </div>
+                                    <li class="nav-item dropdown">
+                                        <h6 class="m-0 ms-2 nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="true">Hi, {username}.</h6>
+                                        <ul class="dropdown-menu">
+                                            <li><Link class="dropdown-item" href="#">Wishlist</Link></li>
+                                            <li><Link class="dropdown-item" href="#">Cart</Link></li>
+                                            <li><hr class="dropdown-divider" /></li>
+                                            <li><button class="dropdown-item" onClick={logout}>Log out</button></li>
+                                        </ul>
+                                    </li>
+                                    
+                                </Link> :
+                            
+                            
+                            <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover} `} to="login">
+                                <div className={`${styles.icons}`}>
+                                    <i className={`fa-regular fa-user fs-5`}></i>
                                 </div>
-                                <h6 className='m-0 ms-2 '>$0.00</h6>
+                                <h6 className='m-0 ms-2'>Sign in</h6>
                             </Link>
+                                
+                                
+                                
+                                }
+
                         </li>
-                        
+
+
                         <li className="nav-item">
                             <Link className={`nav-link py-0 ${styles.catHover}`} to="#">
                                 <div className={`${styles.icons} position-relative`}>
@@ -51,21 +88,23 @@ export default function NavBar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className={`nav-link py-0 ${styles.catHover}`}  to="#">
+                            <Link className={`nav-link py-0 ${styles.catHover}`} to="#">
                                 <div className={`${styles.icons} position-relative`}>
                                     <i className={`fa-regular fa-heart fs-5  `}></i>
                                     <p className={`${styles.counter} shadow  p-2`}>9</p>
                                 </div>
                             </Link>
                         </li>
-                        <li className="nav-item ">
-                            <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover} `} to="#">
-                                <div className={`${styles.icons}`}>
-                                    <i className={`fa-regular fa-user fs-5`}></i>
+                        <li className="nav-item">
+                            <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover}`} to="#">
+                                <div className={`${styles.icons} position-relative`}>
+                                    <i className={`fa fa-shopping-cart fs-5  `}></i>
+                                    <p className={`${styles.counter} shadow  p-2`}>0</p>
                                 </div>
-                                <h6 className='m-0 ms-2'>Sign in</h6>
+                                <h6 className='m-0 ms-2 '>$0.00</h6>
                             </Link>
                         </li>
+
                     </ul>
                 </div>
             </div>

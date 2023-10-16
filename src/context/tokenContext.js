@@ -1,11 +1,12 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export let tokenContext = createContext();
 
-export default function tokenContextProvider(props){
-    console.log(props.children);
+export default function TokenContextProvider(props){
+    let [token,setToken] = useState(null);
+
     return (
-    <tokenContext.Provider>
+    <tokenContext.Provider value={{token,setToken}}>
         {props.children}
     </tokenContext.Provider>
     )

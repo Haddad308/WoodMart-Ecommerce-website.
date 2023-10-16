@@ -7,11 +7,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./styles.css";
+import TokenContextProvider from "./context/tokenContext.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    
-        <React.StrictMode>
+    <React.StrictMode>
+        <TokenContextProvider>
             <App />
-        </React.StrictMode>
+        </TokenContextProvider>
+    </React.StrictMode>
 );

@@ -1,0 +1,9 @@
+.product {
+  transition: all 400ms;
+}
+
+.product:hover {
+    -webkit-box-shadow: 0px 0px 15px -6px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 15px -6px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 15px -6px rgba(66, 68, 90, 1);
+}

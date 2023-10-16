@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import styles from "./Home.module.css"
 import g6 from "../../assets/img/g6.png"
 import apple from "../../assets/img/apple.png"
+import Catogeries from '../Catogeries/Catogeries';
+import Products from '../Products/Products';
 
 
 export default function Home() {
@@ -16,7 +18,9 @@ export default function Home() {
         autoplay: true,
         autoplaySpeed: 4000
     };
-    return (
+    return <>
+    
+        {/* Slider */}
         <div className="container-fluid">
             <div className="row justify-content-around py-4">
                 <div className="col-5 w-49 p-0 rounded-3 overflow-hidden">
@@ -87,5 +91,9 @@ export default function Home() {
                 </div>
             </div>
         </div>
-    )
+
+        <Catogeries/>
+        <Products/>
+    </>
+    
 }
