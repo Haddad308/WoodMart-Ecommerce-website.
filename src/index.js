@@ -21,3 +21,17 @@ root.render(
         </QueryClientProvider>
     </React.StrictMode>
 );
+
+
+// TODO List: 
+//? 1- cart operation. 
+//? 2- Payment operation.
+//? 3- Responsive design. 
+//? 4- reviews.
+//? 5- fix Footer.
+//? 6- add catogeries sideBar.  
+//? 7- Update product cart.  
+//? 8- Whislist.  
+//? 8- Searching.  
+
+
