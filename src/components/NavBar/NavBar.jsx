@@ -49,16 +49,17 @@ export default function NavBar() {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item ">
                             {token? <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover} `} to="#">
+                                    
                                     <div className={`${styles.icons}`}>
                                         <i className={`fa-regular fa-user fs-5`}></i>
                                     </div>
-                                    <li class="nav-item dropdown">
-                                        <h6 class="m-0 ms-2 nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="true">Hi, {username}.</h6>
-                                        <ul class="dropdown-menu">
-                                            <li><Link class="dropdown-item" href="#">Wishlist</Link></li>
-                                            <li><Link class="dropdown-item" href="#">Cart</Link></li>
-                                            <li><hr class="dropdown-divider" /></li>
-                                            <li><button class="dropdown-item" onClick={logout}>Log out</button></li>
+                                    <li className="nav-item dropdown">
+                                        <h6 className="m-0 ms-2 nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="true">Hi, {username}.</h6>
+                                        <ul className="dropdown-menu">
+                                            <li><Link className="dropdown-item" href="#">Wishlist</Link></li>
+                                            <li><Link className="dropdown-item" href="#">Cart</Link></li>
+                                            <li><hr className="dropdown-divider" /></li>
+                                            <li><button className="dropdown-item" onClick={logout}>Log out</button></li>
                                         </ul>
                                     </li>
                                     
