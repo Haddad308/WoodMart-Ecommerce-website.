@@ -8,11 +8,11 @@ import { tokenContext } from '../../context/tokenContext';
 
 
 export default function NavBar() {
-    let { token,setToken } = useContext(tokenContext);
+    let { token, setToken } = useContext(tokenContext);
     let username = localStorage.getItem("userName");
     let navigate = useNavigate();
 
-    function logout(){
+    function logout() {
         navigate("/login");
         setToken(null);
         localStorage.removeItem("userName");
@@ -34,7 +34,7 @@ export default function NavBar() {
                             </div>
                         </li>
                         <li className="nav-item mx-1">
-                            <Link className={`nav-link fw-semibold  ${styles.linksHover}`} to="#">Promotions</Link>
+                            <Link className={`nav-link fw-semibold  ${styles.linksHover}`} to="/">Home</Link>
                         </li>
                         <li className="nav-item mx-1">
                             <Link className={`nav-link fw-semibold ${styles.linksHover}`} to="#">Our Contacts</Link>
@@ -48,43 +48,41 @@ export default function NavBar() {
                     </ul>
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item ">
-                            {token? <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover} `} to="#">
-                                    
-                                    <div className={`${styles.icons}`}>
-                                        <i className={`fa-regular fa-user fs-5`}></i>
-                                    </div>
-                                    <li className="nav-item dropdown">
-                                        <h6 className="m-0 ms-2 nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="true">Hi, {username}.</h6>
-                                        <ul className="dropdown-menu">
-                                            <li><Link className="dropdown-item" href="#">Wishlist</Link></li>
-                                            <li><Link className="dropdown-item" href="#">Cart</Link></li>
-                                            <li><hr className="dropdown-divider" /></li>
-                                            <li><button className="dropdown-item" onClick={logout}>Log out</button></li>
-                                        </ul>
-                                    </li>
-                                    
-                                </Link> :
-                            
-                            
-                            <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover} `} to="login">
+                            {token ? <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover} `} to="#">
+
                                 <div className={`${styles.icons}`}>
                                     <i className={`fa-regular fa-user fs-5`}></i>
                                 </div>
-                                <h6 className='m-0 ms-2'>Sign in</h6>
-                            </Link>
-                                
-                                
-                                
-                                }
+                                <li className="nav-item dropdown">
+                                    <h6 className="m-0 ms-2 nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="true">Hi, {username}.</h6>
+                                    <ul className="dropdown-menu">
+                                        <li><Link className="dropdown-item" href="#">Wishlist</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Cart</Link></li>
+                                        <li><hr className="dropdown-divider" /></li>
+                                        <li><button className="dropdown-item" onClick={logout}>Log out</button></li>
+                                    </ul>
+                                </li>
+
+                            </Link> :
+
+
+                                <Link className={`nav-link py-0 d-flex justify-content-center align-items-md-center ${styles.catHover} `} to="login">
+                                    <div className={`${styles.icons}`}>
+                                        <i className={`fa-regular fa-user fs-5`}></i>
+                                    </div>
+                                    <h6 className='m-0 ms-2'>Sign in</h6>
+                                </Link>
+
+
+
+                            }
 
                         </li>
-
-
                         <li className="nav-item">
                             <Link className={`nav-link py-0 ${styles.catHover}`} to="#">
                                 <div className={`${styles.icons} position-relative`}>
                                     <i className={`fa-solid fa-code-compare fs-5  `}></i>
-                                    <p className={`${styles.counter} shadow  p-2`}>1</p>
+                                    <p className={`${styles.counter} shadow  p-2`}>0</p>
                                 </div>
                             </Link>
                         </li>
@@ -92,7 +90,7 @@ export default function NavBar() {
                             <Link className={`nav-link py-0 ${styles.catHover}`} to="#">
                                 <div className={`${styles.icons} position-relative`}>
                                     <i className={`fa-regular fa-heart fs-5  `}></i>
-                                    <p className={`${styles.counter} shadow  p-2`}>9</p>
+                                    <p className={`${styles.counter} shadow  p-2`}>0</p>
                                 </div>
                             </Link>
                         </li>

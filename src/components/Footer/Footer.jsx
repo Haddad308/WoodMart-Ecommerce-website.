@@ -7,7 +7,7 @@ import paymnets from "../../assets/img/payments.png";
 
 export default function Footer() {
     return (
-    <footer className='' >
+    <footer id='contacts' >
         <div className="row p-4">
             <div className="col-3">
                 <div className="logo">

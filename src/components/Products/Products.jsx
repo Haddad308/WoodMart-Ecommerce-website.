@@ -12,7 +12,7 @@ export default function Products() {
     }
 
     let { data, isLoading } = useQuery("getProducts", getAllProducts);
-    console.log(data?.data?.data[0]);
+    // console.log(data?.data?.data[0]);
 
 
 

@@ -11,7 +11,6 @@ import Home from './components/Home/Home';
 import { tokenContext } from './context/tokenContext.js';
 import ProtectedRoutes from './components/ProtectedRoutes/ProtectedRoutes.jsx';
 import ProductDetails from './components/ProductDetails/ProductDetails.jsx';
-<ProtectedRoutes></ProtectedRoutes>
 
 const routers = createBrowserRouter([
   {

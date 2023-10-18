@@ -1,121 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Nerko+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Nerko+One&display=swap");
 
-.mainBg{
-    background-color: #1C61E7;
+.mainBg {
+  background-color: #1c61e7;
 }
 
 /* html{
     overflow:hidden;
 } */
 
-body{
-    background-color: #F6F6F6;
+body {
+  background-color: #f6f6f6;
 }
 
-nav{
-    background-color: white;
+nav {
+  background-color: white;
 }
 
-footer{
-    background-color: white;
+footer {
+  background-color: white;
 }
-.navtext{
-    color: #1C61E7;
-}
-
-.wed50{
-    width: 40px;
-    height: 40px;
+.navtext {
+  color: #1c61e7;
 }
 
-.nav-link{
-    color: #333333 ;
+.wed50 {
+  width: 40px;
+  height: 40px;
 }
 
-.text-color{
-    cursor: pointer;
-    transition: all 400ms;
+.nav-link {
+  color: #333333;
 }
 
-.text-color:hover{
-    color: #1C61E7;
+.text-color {
+  cursor: pointer;
+  transition: all 400ms;
 }
 
-.grey{
-    color: #918f8f;
+.text-color:hover {
+  color: #1c61e7;
 }
 
-.icon-size
-{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
+.grey {
+  color: #918f8f;
 }
 
-.facebook{
-    background-color: #0866FF;
-    transition: all 400ms;
+.icon-size {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
 }
 
-.facebook:hover{
-    background-color: #0b4eb9;
+.facebook {
+  background-color: #0866ff;
+  transition: all 400ms;
 }
 
-.twitter{
-    background-color: #1A8CD8;
-    transition: all 400ms;
+.facebook:hover {
+  background-color: #0b4eb9;
 }
 
-.twitter:hover{
-    background-color: #1a6ea5;
+.twitter {
+  background-color: #1a8cd8;
+  transition: all 400ms;
 }
 
-.pinterest{
-    background-color: #AF1C22;
-    transition: all 400ms;
+.twitter:hover {
+  background-color: #1a6ea5;
 }
 
-.pinterest:hover{
-    background-color: #8d191d;
+.pinterest {
+  background-color: #af1c22;
+  transition: all 400ms;
 }
 
-.linkedin{
-    background-color: #02649A;
-    transition: all 400ms;
+.pinterest:hover {
+  background-color: #8d191d;
 }
 
-.linkedin:hover{
-    background-color: #01486e;
+.linkedin {
+  background-color: #02649a;
+  transition: all 400ms;
 }
 
-.telgram{
-    background-color: #37AEE2;
-    transition: all 400ms;
-}
-.telgram:hover{
-    background-color: #1f7ca4;
+.linkedin:hover {
+  background-color: #01486e;
 }
 
-hr{
-    color:#918f8f ;
+.telgram {
+  background-color: #37aee2;
+  transition: all 400ms;
+}
+.telgram:hover {
+  background-color: #1f7ca4;
 }
 
-.small{
-    font-size: 12px;
+hr {
+  color: #918f8f;
 }
 
-.w-49
-{
-    width: 49%;
-}   
-
-
-a{
-color: inherit; /* blue colors for links too */
-text-decoration: inherit; /* no underline */
+.small {
+  font-size: 12px;
 }
+
+.w-49 {
+  width: 49%;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
