@@ -32,6 +32,6 @@ root.render(
 //? 6- add catogeries sideBar.  
 //? 7- Update product cart.  
 //? 8- Whislist.  
-//? 8- Searching.  
+//? 9- Searching.  
 
 
